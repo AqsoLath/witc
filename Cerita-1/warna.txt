@@ -1,0 +1,491 @@
+biru donker : #06224a
+Biru tua: #0245a3
+Biru muda: #8fbaf3
+biru langit: #bdf1f6
+putih: #fff
+
+hitam: #0d0a0b
+abu2: #454955
+putih: #f3eff5
+hijau muda: #72b01d
+hijau tua: #3f7d20
+
+hijau muda: #5ee831
+
+#303841 : hitam gelap
+#3a4750 : hitam rada terang
+#f6c90e : emas
+#eeeeee : putih
+#ffffff : putih
+
+
+<?php 
+
+session_start();
+
+if (isset($_POST['submit'])) {
+	$_SESSION['login'] = true;
+	header("Location: index.php");
+}
+ ?>
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Cover</title>
+ 	<link rel="stylesheet" type="text/css" href="css/stylebaru.css">
+
+ 	<!-- font awesome -->
+
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ </head>
+ <body>
+
+<div class="navbar">
+	<div class="navbar-brand"><h3>Logonya</h3></div>
+	<!-- <div class="navbar-menu"><h3>menu</h3></div>
+	<a href="cover.php"> balik</a> -->
+	<!-- <ul>
+		<li>Home</li>
+		<li>Info</li>
+		<li>kontak</li>
+	</ul> -->
+	<div class="navbar-pilihan">
+		<a href="cover.php">home</a>
+		<a href="info.php">info</a>
+		<a href="kontak.php">kontak</a>
+	</div>
+
+</div>
+
+
+<div class="wadah">
+	<div class="wadah-judul">
+		<h1 class="Judul">The Green Place</h1>
+	</div>
+
+	<div class="wadah-teks"><p><span>The Green Place,</span> adalah sebuah cerita pendek yang memakai konsep <span>Butterfly effect.</span> Di mana nantinya pembaca dapat memilih sendiri jalan cerita yang diinginkan. Dan tentu saja dengan akhir cerita yang berbeda-beda.</p></div>
+
+	<div class="wadah-tombol">
+		<form method="post" action="">
+			<button class="masuk" name="submit">Mulai Membaca</button>
+		</form>
+	</div>
+	<div class="wadah-arrow">
+		<a href="ind.php">
+			<p>Sinopsis</p>
+			<i class="fa fa-long-arrow-down" aria-hidden="true" ></i>
+		</a>
+
+	</div>
+ </div>
+
+ <div class="sinopsis">
+ 	<div class="sinopsis-teks">
+ 		<div class="sinopsis-judul">
+ 			<h2>Sinopsis</h2>
+ 		</div>
+ 		<p>
+ 			<span>The Green Place </span>menceritakan tokoh utama yaitu Pandu bertahan hidup dari sebuah <span>zombie apocalypse </span>yang mengacaukan dunia. Bersama istrinya yaitu Lani, dan juga sahabat lama Pandu yaitu Djaka. Mereka melakukan perjalanan untuk ke sebuah tempat aman yang bernama The green place. Kalian sendiri yang memilih dan menentukan, dapatkah mereka selamat dalam perjalanan ke sana!!!
+ 		</p>
+ 	</div>
+
+ 	<div class="karakter-judul">
+ 		<h2>Karakter</h2>
+ 	</div>
+ 	
+ 	<div class="sinopsis-karakter">
+
+	 	<div class="karakter karakter-1">
+	 		
+	 		<img src="image/sketsa-pandu.jpg">
+	 		<h3 class="karakter-nama">
+	 			Pandu
+	 		</h3>
+	 		<p>Pria tampan satu ini pernah menjadi seorang pengacara. Memiliki badan atletis karena rajin berolahraga, dan juga kemampuan berbicara yang memukau. Membuat setiap gadis akan melirik kepadanya.</p>
+	 	</div>
+
+	 	<div class="karakter karakter-2">
+	 		
+	 		<img src="image/sketsa-lani2.jpg">
+	 		<h3 class="karakter-nama">
+	 			Lani
+	 		</h3>
+	 		<p>Istri Pandu ini dulunya merupakan seorang perawat yang handal. Walaupun ia tak bisa bela diri, namun kemampuannya mengobati orang tak bisa diragukan.</p>
+	 	</div>
+
+	 	<div class="karakter karakter-3">
+	 		
+	 		<img src="image/sketsa-djaka.jpg">
+	 		<h3 class="karakter-nama">
+	 			Djaka
+	 		</h3>
+	 		<p>Teman lama Pandu ini sudah seperti saudara baginya. ia adalah bekas pencuri spesialis kendaraan bermotor. Oleh karena itu, Djaka bisa menyalakan mobil dengan sangat mudah tanpa menggunakan alat sama sekali. </p>
+	 	</div>
+ 	</div>
+
+ </div>
+ </body>
+ </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body{
+	/*background-color: #3f7d20;*/
+	background-color: #3a4750;
+}
+
+.sembunyi{
+	display: none;
+}
+
+.navbar{
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 15px 100px;
+	background-color: #303841;
+	z-index: 10;
+	/*border: 1px solid green;*/
+
+}
+
+.navbar-links{
+	/*padding: 1px 1px;*/
+	transform: translateY(-15px);
+	display: flex;
+	color: white;
+	flex-direction: column;
+	height: 100vh;
+	width: 50%;
+	background-color: #eee;
+	position: fixed;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 11;
+	right: 0;
+	/*display: none;*/
+
+}
+
+.navbar-links ul li{
+	list-style: none;
+}
+
+.navbar-links ul li a{
+	/*list-style: none;*/
+	text-decoration: none;
+}
+
+.navbar h3{
+	letter-spacing: 1px;
+}
+
+.navbar-brand{
+	/*margin-right: auto;*/
+	/*margin-left: 30px;*/
+	color: #5ee831;
+}
+
+.navbar-menu{
+	/*position: absolute;
+	right: 20px;*/
+	margin-left: auto;
+	/*margin-right: 30px;*/
+	/*color: #5ee831;*/
+
+}
+
+.hamburger{
+	cursor: pointer;
+}
+
+.hamburger .line{
+	background-color: #eee;
+	width: 32px;
+	height: 3px;
+	margin: 5px;
+	z-index: 999;
+	cursor: pointer;
+	/*position: absolute;*/
+}
+
+
+.container{
+	padding: 20px;
+	background-color: #3a4750;
+	margin: 70px 100px;
+	border: 3px solid #5ee831;
+	/*box-shadow: 2px 2px 2px green;*/
+}
+
+.container p{
+	color: #f3eff5;
+	text-align: justify;
+	margin: 15px 0;
+	font-size: 20px;
+	letter-spacing: 
+}
+
+
+
+
+
+/*cover.php*/
+
+.navbar-pilihan{
+	margin-left: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar-pilihan a{
+	margin: 0 40px;
+	text-decoration: none;
+	color: #5ee831;
+}
+
+
+
+.wadah{
+	padding-top: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	min-height: 100vh;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.wadah-judul{
+	color: #5ee831;
+	font-size: 42px;
+	margin-top: 30px;
+	/*justify-content: flex-start;*/
+}
+
+.wadah-teks{
+	max-width: 800px;
+	padding: 30px 0;
+	/*margin-top: 20px;*/
+}
+
+.wadah-teks p{
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	line-height: 25px;
+}
+
+.wadah-teks p span{
+	font-style: italic;
+}
+
+.masuk{
+	background-color: #303841b9;
+	border: 3px solid #5ee831;
+	padding: 8px 0;
+	width: 500px;
+	border-radius: 30px;
+	color: #5ee831;
+	font-size: 30px;
+	margin-top: 60px;
+
+	/*text-shadow: 1px 1px 1px #333;*/
+}
+
+.masuk:hover{
+	transition: .5s;
+	cursor: pointer;
+	background-color: #5ee83180;
+	color: #fff;
+}
+
+.wadah-arrow{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	margin-top: 100px;
+	color: #fff;
+}
+
+.wadah-arrow a{
+	text-decoration: none;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 18px;
+	-webkit-animation: slide-top 1s ease-in-out infinite alternate-reverse both;
+	        animation: slide-top 1s ease-in-out infinite alternate-reverse both;
+}
+
+.wadah-arrow i{
+	margin-top: 10px;
+	font-size: 24px;
+	/*-webkit-animation: slide-top 1s ease-in-out infinite alternate-reverse both;*/
+	        /*animation: slide-top 1s ease-in-out infinite alternate-reverse both;*/
+}
+
+.sinopsis {
+	padding: 100px;
+	min-height:  100vh;
+	/*display: flex;*/
+}
+
+.sinopsis-judul {
+	font-size: 32px;
+	text-align: center;
+	color: #5ee831;
+	margin-top: 20px;
+}
+
+.sinopsis-teks p{
+	padding: 20px 100px;
+	color: #fff;
+	font-size: 20px;
+}
+
+.sinopsis-karakter{
+	display: flex;
+	justify-content: space-between;
+	/*align-self:center;*/
+	/*align-items: center;*/
+	/*justify-content: center;*/
+	/*flex-direction: row;*/
+}
+
+.karakter-judul{
+	font-size: 32px;
+	text-align: center;
+	color: #5ee831;
+}
+
+.karakter{
+	text-align: center;
+	width: 400px;
+	padding: 20px;
+	/*display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-self: center;
+	align-items: center;*/
+
+	/*max-width: 100px;*/
+}
+
+.karakter-nama{
+	color: #5ee831;
+	font-size: 24px;
+}
+
+.karakter p{
+	/*width: /400px;*/
+	text-align: justify;
+	color: #fff;
+	font-size: 19px;
+	letter-spacing: .5px;
+}
+
+.karakter-1 img{
+	height: 290px;
+}
+
+.karakter img{
+	width: 200px;
+	border: 3px solid #303841;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-2-18 13:45:43
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
